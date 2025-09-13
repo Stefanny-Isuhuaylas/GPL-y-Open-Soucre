@@ -2,27 +2,8 @@ import streamlit as st
 
 st.set_page_config(page_title="GPL y Open Source", page_icon="📘", layout="centered")
 
-# --- CSS para fondo ---
-page_bg_img = '''
-<style>
-.stApp {
-background-image: url("https://images.unsplash.com/photo-1519389950473-47ba0277781c"); /* fondo general */
-background-size: cover;
-background-attachment: fixed;
-}
-
-h1, h2, h3, h4, h5, h6, .stMarkdown, .stText, .stRadio label {
-color: white !important; /* texto blanco sobre fondo oscuro */
-}
-</style>
-'''
-st.markdown(page_bg_img, unsafe_allow_html=True)
-
-# --- Cabecera ---
-st.image("https://upload.wikimedia.org/wikipedia/commons/9/93/GPLv3_Logo.svg", width=120)
 st.title("📘 GPL y Open Source")
-st.caption("Autor: **Stefanny Isuhuaylas**")
-st.caption("Explora temas en pestañas y pon a prueba tus conocimientos con un quiz interactivo.")
+st.caption("Explora los temas en pestañas y pon a prueba tus conocimientos con un quiz interactivo.")
 
 # --- Tabs para la información ---
 tab1, tab2, tab3 = st.tabs(["🔓 Open Source", "📝 GPL", "⚖️ Comparación"])
@@ -39,13 +20,14 @@ with tab1:
     st.image("https://opensource.com/sites/default/files/lead-images/open_source_programmer_520.jpg", use_column_width=True)
 
 with tab2:
-    st.image("https://upload.wikimedia.org/wikipedia/commons/6/64/Gnu-bash-logo.svg", width=80)
+    st.image("https://upload.wikimedia.org/wikipedia/commons/9/93/GPLv3_Logo.svg", width=120)
     st.subheader("¿Qué es la GPL?")
     st.write("La **GNU General Public License (GPL)** es una licencia creada por la Free Software Foundation.")
     with st.expander("Principales puntos de la GPL"):
         st.write("- Uso, estudio, modificación y distribución libres.")
         st.write("- **Copyleft**: obliga a mantener la licencia en obras derivadas.")
         st.write("- Versiones: GPLv2, GPLv3, etc.")
+    st.image("https://upload.wikimedia.org/wikipedia/commons/6/64/Gnu-bash-logo.svg", width=80)
 
 with tab3:
     st.subheader("Comparación rápida")
